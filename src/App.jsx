@@ -1,12 +1,15 @@
 import './App.css'
 import Header from './components/header/header.component'
-import Posts from './pages/Post/Post'
+import PostComentario from './pages/PostComentario/PostComentario'
+
+
+
 
 function App() {
   return (
     <>
       <Header />
-      <Posts />
+      <PostComentario />
     </>
   )
 }

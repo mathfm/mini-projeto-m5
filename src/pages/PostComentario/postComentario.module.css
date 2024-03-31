@@ -1,0 +1,39 @@
+.comment {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    width: 100%;
+    height: 91vh;
+    background-color: aquamarine;
+    align-items: center;
+    justify-content: start;
+}
+.user-info {
+    display: flex;
+    gap: 1em;
+    background-color: aqua;
+    width: 900px;
+    align-items: center;
+    padding: 1em;
+    border-radius: 5px;
+}
+
+.user-perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-photo {
+    width: 50px;    
+}
+
+.user-photo img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.user-text {
+    width: 700px;
+}

@@ -1,0 +1,42 @@
+.skill-page {
+    width: 100%;
+    height: 91vh;
+    background-color: aqua;
+}
+
+.skill-container {
+    display: flex;
+    flex-direction: column;
+    background-color: antiquewhite;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-table {
+    background-color: rgb(221, 155, 68);
+    align-items: center;
+    
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 1em;
+}
+
+table {
+    width: 100%;
+}
+
+.skill-table td {
+    background-color: antiquewhite;
+    text-align: center;
+}
+
+.skill-table tr {
+    background-color: rgb(253, 185, 97);
+}
+
+.skill-info {
+    background-color: aqua;
+}
