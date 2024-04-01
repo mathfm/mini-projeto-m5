@@ -32,7 +32,7 @@ export default function Skills() {
 
     return (
         <div className={styles["skill-page"]}>
-           <h3>Usuarios registradas ate o momento</h3>
+           <h3>Ultimas skills registradas</h3>
             <table className={styles["skill-table"]}>
                 <thead>
                     <tr>

@@ -1,4 +1,5 @@
 
+import { Link } from "react-router-dom";
 import styles from "./header.module.css";
 
 export default function Header() {
@@ -6,9 +7,9 @@ export default function Header() {
         <header className={styles["header"]}>
             <h3>Bright Idea</h3>
             <nav className={styles["nav-link"]}>
-                <a href="#" className={styles["link"]}>Home</a>
-                <a href="#" className={styles["link"]}>Posts</a>
-                <a href="#" className={styles["link"]}>Skills</a>
+                <Link to="/" className={styles["link"]}>Home</Link>
+                <Link to="/posts" className={styles["link"]}>Posts</Link>
+                <Link to="/skills" className={styles["link"]}>Skills</Link>
             </nav>
         </header>
     )
