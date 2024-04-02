@@ -1,11 +1,16 @@
 .user-info {
     display: flex;
     gap: 1em;
-    background-color: aqua;
     width: 900px;
     align-items: center;
     padding: 1em;
     border-radius: 5px;
+    background-color: #ED4D1B;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 900px;
+    height: 150px;
+    box-shadow: 4px 4px 0px 0px #000000;
 }
 
 .user-perfil {
@@ -26,4 +31,21 @@
 
 .user-text {
     width: 700px;
+    font-weight: 500;
+}
+
+@media (max-width: 950px) {
+
+    .user-info {
+        width: 350px;
+        height: 350px;
+        padding: 1em;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2em;
+    }
+
+    .user-text {
+        width: 300px;
+    }
 }

@@ -8,3 +8,7 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
+
+body {
+  background: linear-gradient(90deg, #FFE7D1 0%, #FFF2E6 100%);
+}

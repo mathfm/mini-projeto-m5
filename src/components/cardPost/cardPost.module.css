@@ -8,20 +8,29 @@
 }
 
 .post-content {
-    background-color: azure;
     display: flex;
     gap: 2em;
     justify-content: center;
-
+    align-items: center;
+    background-color: #ED4D1B;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 900px;
+    height: 150px;
+    box-shadow: 4px 4px 0px 0px #000000;
 }
 
 .post-text {
-    background-color: bisque;
     width: 550px;
     display: flex;
     flex-direction: column;
     padding: 1em;
     gap: 0.5em;
+
+    p {
+        font-weight: 600;
+    }
+
 }
 
 .post-user-perfil {
@@ -29,11 +38,31 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-weight: 700;
 }
 
 .post-link {
     text-decoration: none;
     font-weight: 500;
-    color: black;
     width: 250px;
+    color: black;
+}
+
+@media (max-width: 950px) {
+    
+    .post-content {
+        width: 350px;
+        height: 350px;
+        padding: 1em;
+        flex-direction: column;
+        gap: 0.5em;
+    }
+
+    .post-text-title {
+        font-size: 1.3em;
+    }
+
+    .post-text {
+        width: 300px;
+    }
 }

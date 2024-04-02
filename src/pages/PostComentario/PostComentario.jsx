@@ -11,16 +11,20 @@ export default function PostComentario() {
     const [comment, setComment] = useState([]);
 
     const getAllComment = async () => {
-        const response = await axios.get(
-            `http://localhost:3000/${post_id}/comment`
-        );
-        const { postComment } = response.data;
-        setComment(postComment);
-        console.log(comment);
+        try {
+            const response = await axios.get(
+                `http://localhost:3000/${post_id}/comment`
+            );
+            const { postComment } = response.data;
+            setComment(postComment);    
+        } catch (error) {
+            console.log(error.message);
+        }
     }
 
     useEffect(() => {
         getAllComment();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
 
@@ -28,7 +32,7 @@ export default function PostComentario() {
     return (
         <section className={styles["page-comment"]}>
             <div className={styles["comment"]}>
-                <h3>Teste</h3>
+                <h3>Comentarios do post</h3>
                 {
                     comment.map((item) => {
                         return (
@@ -40,7 +44,6 @@ export default function PostComentario() {
                         )
                     })
                 }
-                <CardPostComentario comment={"Lorem ipsum, dolor sit amet consectetur adipisicing elit. A doloremque, ipsum dolore dicta quidem impedit velit laborum blanditiis alias quos voluptatibus quam esse, eveniet deleniti odit similique, amet aspernatur nam?"} username={"dio Brando"}/>
             </div>
         </section>
     )

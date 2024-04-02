@@ -8,12 +8,12 @@ export default function CardPost({ username, title, description, post_id}) {
         <div className={styles["post-content"]}>
             <div className={styles["post-user-perfil"]}>
                 <figure className={styles["post-img-perfil"]}>
-                    <img src="/src/assets/dio.jpg" alt="" />
+                    <img src="/src/assets/image.png" alt="" />
                 </figure>
                 <p>{ username }</p>
             </div>
             <div className={styles["post-text"]}>
-                <h2>{title}</h2>
+                <h2 className={styles["post-text-title"]}>{title}</h2>
                 <p>{description}</p>
                 <Link to={`/${post_id}/comment`}  className={styles["post-link"]}>Exibir comentarios da postagem</Link>
             </div>

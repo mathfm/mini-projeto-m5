@@ -19,7 +19,7 @@ export default function Post() {
 
     return (
         <section className={styles["post-page"]}>
-            <h2 className={styles["title-page"]}>Ultimas postagens feitas</h2>
+            <h3 className={styles["title-page"]}>Ultimas postagens feitas</h3>
             {
                 post.map(post => {
                     return (

@@ -1,14 +1,13 @@
 .footer {
     width: 100%;
     height: 3.1rem;
-    background: var(--secundary-color);
+    background: linear-gradient(90deg, #FFE7D1 0%, #FFF2E6 100%);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .footer-text {
-    color: var(--terciary-color);
     font-size: 1.2rem;
     font-weight: 600;
 }

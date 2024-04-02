@@ -1,9 +1,10 @@
 .header {
-    height: 67px;
-    background-color: var(--primary-color);
+    height: 100px;
+    background: linear-gradient(90deg, #FFE7D1 0%, #FFF2E6 100%);
     display: flex;
     align-items: center;
     justify-content: space-around;
+    border: 1px solid black;
 }
 
 .header-logo {
@@ -14,24 +15,57 @@
     cursor: pointer;
 }
 
+.header-title {
+    font-size: 40px;
+    font-weight: 800;
+}
+
 
 
 .nav-link {
     display: flex;
     gap: 2em;
+    align-items: center;
+    justify-content: center;
 }
 
-.link {
+.link, .link-repo {
     text-decoration: none;
     font-weight: 600;
-    font-size: 20px;
-}
-
-.link, h3 {
-    color: var(--terciary-color);
-}
-
-.link-login {
-    text-decoration: none;
+    font-size: 23px;
+    color: black;
+    display: flex;
     
+}
+
+
+.link-repo {
+    border: 2px solid #000000;
+    padding: 5px 1em;
+    background-color: #ED4D1B;
+    box-shadow: 4px 4px 0px 0px #1E1E1E;
+    transition: 0.2s all;
+}
+
+.link-repo:hover {
+    transform: scale(0.98);
+}
+
+.link-repo:active {
+    transform: scale(0.95);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+
+@media (max-width: 950px) {
+
+    .header-title {
+        font-size: 1.5em;
+    }
+
+    .link,
+    .link-repo {
+        font-size: 1.2em;
+    }
+
 }

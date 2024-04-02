@@ -3,6 +3,7 @@ import styles from './skills.module.css';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import moment from 'moment';
+import CardSkill from '../../components/cardSkill/cardSkill.component';
 
 export default function Skills() {
     
@@ -32,71 +33,20 @@ export default function Skills() {
 
     return (
         <div className={styles["skill-page"]}>
-           <h3>Ultimas skills registradas</h3>
-            <table className={styles["skill-table"]}>
-                <thead>
-                    <tr>
-                        <th>Skill</th>
-                        <th>Descrição</th>
-                        <th>Data de Registro</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        skill.map(skill => {
-                            return (
-                                <tr key={skill.id}>
-                                    <th>{skill.skill_name}</th>
-                                    <th>{skill.description}</th>
-                                    <th>{formatedDateBr(skill.createdAt)}</th>
-                                </tr>
-                            )
-                        })
-                    }
-                </tbody>
-            </table>
+            <h3 className={styles["skill-page-title"]}>Ultimas skills registradas</h3>
+            <div className={styles["skill-container"]}>
+                {
+                    skill.map(skill => {
+                        return <CardSkill
+                            key={skill.id}
+                            title={skill.skill_name}
+                            description={skill.description}
+                            datePubished={formatedDateBr(skill.createdAt)} />
+                    })
+                }
+            </div>
         </div>
     )
 }
 
 
-/*
-      return (
-        <div className={styles["skill-page"]}>
-           <h3>Usuarios registradas ate o momento</h3>
-            <table className={styles["skill-table"]}>
-                <thead>
-                    <tr>
-                        <th>Skill</th>
-                        <th>Descrição</th>
-                        <th>Data de Registro</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr className={styles["skill-info"]}>
-                        <td>Javascript</td>
-                        <td>linguagem de programação Multiparadigma</td>
-                        <td>20/04/2024</td>
-                    </tr>
-                    <tr className={styles["skill-info"]}>
-                        <td>Java</td>
-                        <td>linguagem de programação Orientada a objetos</td>
-                        <td>20/04/2024</td>
-                    </tr>
-                    <tr className={styles["skill-info"]}>
-                        <td>Javascript</td>
-                        <td>linguagem de programação Multiparadigma</td>
-                        <td>20/04/2024</td>
-                    </tr>
-                    <tr className={styles["skill-info"]}>
-                        <td>Javascript</td>
-                        <td>linguagem de programação Multiparadigma</td>
-                        <td>20/04/2024</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    )
-  
- 
- */

@@ -7,7 +7,7 @@ export default function CardPostComentario({username, comment}) {
         <div className={styles["user-info"]}>
             <div className={styles["user-perfil"]}>
                 <figure className={styles["user-photo"]}>
-                    <img src="/src/assets/dio.jpg" alt="" />
+                    <img src="/src/assets/image.png" alt="" />
                 </figure>
                 <h4>{username}</h4>
             </div>
