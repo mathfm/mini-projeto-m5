@@ -25,7 +25,7 @@ export default function PostComentario() {
     useEffect(() => {
         getAllComment();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    }, [comment]);
 
 
 

@@ -15,7 +15,7 @@ export default function AppRouter() {
                 <Routes>
                     <Route path="/skills" element={<Skills />} />
                     <Route path="/:post_id/comment" element={<PostComentario />} />
-                    <Route path="/posts" element={<Post />} />
+                    <Route path="/" element={<Post />} />
                 </Routes>
             </Container>
             <Footer />
